@@ -7,13 +7,14 @@ library(tidyverse)
 library(recount3)
 library(recount)
 library(SummarizedExperiment)
+library(doParallel)
 
 # Define parameters
 basedir <- "/Volumes/G_DRIVEmobile/recount3_Rdata"
 human_projects <- available_projects()
-human_projects_tcga <- subset(human_projects, file_source == "tcga" & project_type ==
-  "data_sources")
 human_projects_gtex <- subset(human_projects, file_source == "gtex" & project_type ==
+  "data_sources")
+human_projects_tcga <- subset(human_projects, file_source == "tcga" & project_type ==
   "data_sources")
 
 # Functions
@@ -69,11 +70,25 @@ make_rse <- function(target, file_source) {
   save(rse_gene, file = save_rse_gene)
 }
 
-# Make project files
-projects_tcga <- human_projects_tcga$project
-projects_gtex <- human_projects_gtex$project
-results <- map(projects_tcga, make_rse, "TCGA")
-results <- map(projects_gtex, make_rse, "GTEx")
+# Make project lists
+projects_gtex <- tolower(human_projects_gtex$project)
+projects_tcga <- tolower(human_projects_tcga$project)
+
+# Execute parallel processing
+cores <- getOption("mc.cores", detectCores())
+cl <- makeCluster(cores, type = "FORK")
+registerDoParallel(cl)
+parLapply(cl, projects_gtex, make_rse, "GTEx")
+# Stop cluster
+stopCluster(cl)
+
+# Execute parallel processing
+cores <- getOption("mc.cores", detectCores())
+cl <- makeCluster(cores, type = "FORK")
+registerDoParallel(cl)
+parLapply(cl, projects_tcga, make_rse, "TCGA")
+# Stop cluster
+stopCluster(cl)
 
 traceback()
 
