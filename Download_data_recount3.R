@@ -47,9 +47,9 @@ make_rse <- function(target, file_source) {
 
   # Make data_frame of counts and TPM
   df_counts <- as.data.frame(assay(rse_gene, "counts")) %>%
-    add_column(., ensembl_ID = rownames(.), .before = colnames(.)[1])
+    add_column(., ensembl_id = rownames(.), .before = colnames(.)[1])
   df_tpm <- as.data.frame(assay(rse_gene, "TPM")) %>%
-    add_column(., ensembl_ID = rownames(.), .before = colnames(.)[1])
+    add_column(., ensembl_id = rownames(.), .before = colnames(.)[1])
   df_meta <- as.data.frame(colData(rse_gene))
 
   # Replace the rownames to gene symbol

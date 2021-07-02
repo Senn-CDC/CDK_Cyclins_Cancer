@@ -2,10 +2,7 @@
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("ACC")
 if (file_exists == FALSE) {
   dir.create("ACC")
@@ -30,15 +27,12 @@ download.file(curl, "Comprehensive Pan-Genomic Characterization of Adrenocortica
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
-file_exists <- file.exists("BLCA_MIBC")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
+file_exists <- file.exists("BLCA_MIB")
 if (file_exists == FALSE) {
-  dir.create("BLCA_MIBC")
+  dir.create("BLCA_MIB")
 }
-setwd("BLCA_MIBC")
+setwd("BLCA_MIB")
 
 # Download files
 curl <- "https://ars.els-cdn.com/content/image/1-s2.0-S0092867417310565-mmc1.xlsx"
@@ -54,10 +48,7 @@ download.file(curl, "Comprehensive Molecular Characterization of Muscle-Invasive
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("BRCA")
 if (file_exists == FALSE) {
   dir.create("BRCA")
@@ -92,10 +83,7 @@ download.file(curl, "Comprehensive Molecular Portraits of Invasive Lobular Breas
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("CESC")
 if (file_exists == FALSE) {
   dir.create("CESC")
@@ -112,10 +100,7 @@ download.file(curl, "Integrated genomic and molecular characterization of cervic
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("CHOL")
 if (file_exists == FALSE) {
   dir.create("CHOL")
@@ -134,15 +119,12 @@ download.file(curl, "ResourceIntegrative Genomic Analysis of Cholangiocarcinoma 
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
-file_exists <- file.exists("COAD")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
+file_exists <- file.exists("COAD_READ")
 if (file_exists == FALSE) {
-  dir.create("COAD")
+  dir.create("COAD_READ")
 }
-setwd("COAD")
+setwd("COAD_READ")
 
 # Download files
 curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature11252/MediaObjects/41586_2012_BFnature11252_MOESM70_ESM.zip"
@@ -156,53 +138,33 @@ download.file(curl, "Comprehensive molecular characterization of human colon and
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
-file_exists <- file.exists("ESCA")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
+file_exists <- file.exists("GBM_nature_2008")
 if (file_exists == FALSE) {
-  dir.create("ESCA")
+  dir.create("GBM_nature_2008")
 }
-setwd("ESCA")
+setwd("GBM_nature_2008")
 
 # Download files
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM91_ESM.xlsx"
-download.file(curl, "table_s1.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM92_ESM.xlsx"
-download.file(curl, "table_s2.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM93_ESM.xlsx"
-download.file(curl, "table_s3.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM94_ESM.xlsx"
-download.file(curl, "table_s4.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM95_ESM.xlsx"
-download.file(curl, "table_s5.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM96_ESM.xlsx"
-download.file(curl, "table_s6.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM97_ESM.xlsx"
-download.file(curl, "table_s7.xlsx")
-curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM98_ESM.pdf"
-download.file(curl, "supplementary_information.pdf")
-curl <- "https://www.nature.com/articles/nature20805.pdf"
-download.file(curl, "Integrated genomic characterization of oesophageal carcinoma.pdf")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature07385/MediaObjects/41586_2008_BFnature07385_MOESM265_ESM.xls"
+download.file(curl, "supplementary_tables.xls")
+curl <- "https://www.nature.com/articles/nature07385.pdf"
+download.file(curl, "Comprehensive genomic characterization defines human glioblastoma genes and core pathways.pdf")
 
 # Environment Clear
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
-file_exists <- file.exists("GBM")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
+file_exists <- file.exists("GBM_cell_2013")
 if (file_exists == FALSE) {
-  dir.create("GBM")
+  dir.create("GBM_cell_2013")
 }
-setwd("GBM")
+setwd("GBM_cell_2013")
 
 # Download files
 curl <- "https://ars.els-cdn.com/content/image/1-s2.0-S0092867413012087-mmc1.xls"
-download.file(curl, "table_s1.xlsx")
+download.file(curl, "table_s1.xls")
 curl <- "https://ars.els-cdn.com/content/image/1-s2.0-S0092867413012087-mmc2.xlsx"
 download.file(curl, "table_s2.xlsx")
 curl <- "https://ars.els-cdn.com/content/image/1-s2.0-S0092867413012087-mmc3.xlsx"
@@ -224,10 +186,7 @@ download.file(curl, "The Somatic Genomic Landscapeof Glioblastoma.pdf")
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("HNSC")
 if (file_exists == FALSE) {
   dir.create("HNSC")
@@ -244,10 +203,7 @@ download.file(curl, "Comprehensive genomic characterization of head and neck squ
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("KICH")
 if (file_exists == FALSE) {
   dir.create("KICH")
@@ -280,10 +236,7 @@ download.file(curl, "The Somatic Genomic Landscape of Chromophobe Renal Cell Car
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("KIRC")
 if (file_exists == FALSE) {
   dir.create("KIRC")
@@ -300,10 +253,7 @@ download.file(curl, "Comprehensive molecular characterization of clear cell rena
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("KIRP")
 if (file_exists == FALSE) {
   dir.create("KIRP")
@@ -338,10 +288,7 @@ download.file(curl, "Comprehensive Molecular Characterization of Papillary Renal
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("LAML")
 if (file_exists == FALSE) {
   dir.create("LAML")
@@ -358,10 +305,7 @@ download.file(curl, "Genomic and epigenomic landscapes of adult de novo acute my
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("LGG")
 if (file_exists == FALSE) {
   dir.create("LGG")
@@ -392,10 +336,7 @@ download.file(curl, "Comprehensive, Integrative Genomic Analysis of Diffuse Lowe
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("LIHC")
 if (file_exists == FALSE) {
   dir.create("LIHC")
@@ -426,10 +367,7 @@ download.file(curl, "Comprehensive and Integrative Genomic Characterization of H
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("LUAD")
 if (file_exists == FALSE) {
   dir.create("LUAD")
@@ -446,10 +384,7 @@ download.file(curl, "Comprehensive molecular profiling of lung adenocarcinoma.pd
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("LUSC")
 if (file_exists == FALSE) {
   dir.create("LUSC")
@@ -466,10 +401,7 @@ download.file(curl, "Comprehensive genomic characterization of squamous cell lun
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("MESO")
 if (file_exists == FALSE) {
   dir.create("MESO")
@@ -500,10 +432,7 @@ download.file(curl, "Integrative Molecular Characterization of Malignant Pleural
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("OV")
 if (file_exists == FALSE) {
   dir.create("OV")
@@ -520,10 +449,7 @@ download.file(curl, "Integrated genomic analyses of ovarian carcinoma.pdf")
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("PAAD")
 if (file_exists == FALSE) {
   dir.create("PAAD")
@@ -558,10 +484,7 @@ download.file(curl, "Integrated Genomic Characterization of PancreaticDuctal Ade
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("PCPG")
 if (file_exists == FALSE) {
   dir.create("PCPG")
@@ -582,10 +505,7 @@ download.file(curl, "Comprehensive Molecular Characterization ofPheochromocytoma
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("PRAD")
 if (file_exists == FALSE) {
   dir.create("PRAD")
@@ -608,10 +528,7 @@ download.file(curl, "The Molecular Taxonomy of Primary Prostate Cancer.pdf")
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("SARC_Adult")
 if (file_exists == FALSE) {
   dir.create("SARC_Adult")
@@ -636,16 +553,13 @@ download.file(curl, "table_s7.xls")
 curl <- "https://ars.els-cdn.com/content/image/1-s2.0-S0092867417312035-mmc8.pdf"
 download.file(curl, "methods_s1.pdf")
 curl <- "https://www.sciencedirect.com/science/article/pii/S0092867417312035/pdfft?isDTMRedir=true&download=true"
-download.file(curl, "Comprehensive and Integrated GenomicCharacterization of Adult Soft Tissue Sarcomas.pdf")
+download.file(curl, "Comprehensive and Integrated GenomicCharacterization of Adult Soft Tissue SARC_Adultomas.pdf")
 
 # Environment Clear
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("SKCM")
 if (file_exists == FALSE) {
   dir.create("SKCM")
@@ -670,10 +584,7 @@ download.file(curl, "Genomic Classification of Cutaneous Melanoma.pdf")
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("STAD")
 if (file_exists == FALSE) {
   dir.create("STAD")
@@ -704,10 +615,38 @@ download.file(curl, "Comparative Molecular Analysis of Gastrointestinal Adenocar
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
+file_exists <- file.exists("STES")
+if (file_exists == FALSE) {
+  dir.create("STES")
+}
+setwd("STES")
 
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+# Download files
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM91_ESM.xlsx"
+download.file(curl, "table_s1.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM92_ESM.xlsx"
+download.file(curl, "table_s2.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM93_ESM.xlsx"
+download.file(curl, "table_s3.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM94_ESM.xlsx"
+download.file(curl, "table_s4.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM95_ESM.xlsx"
+download.file(curl, "table_s5.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM96_ESM.xlsx"
+download.file(curl, "table_s6.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM97_ESM.xlsx"
+download.file(curl, "table_s7.xlsx")
+curl <- "https://static-content.springer.com/esm/art%3A10.1038%2Fnature20805/MediaObjects/41586_2017_BFnature20805_MOESM98_ESM.pdf"
+download.file(curl, "supplementary_information.pdf")
+curl <- "https://www.nature.com/articles/nature20805.pdf"
+download.file(curl, "Integrated genomic characterization of oesophageal carcinoma.pdf")
+
+# Environment Clear
+rm(list = ls(all.names = TRUE))
+ls(all.names = TRUE)
+
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("TGCT")
 if (file_exists == FALSE) {
   dir.create("TGCT")
@@ -736,10 +675,7 @@ download.file(curl, "Integrated Molecular Characterization of TesticularGerm Cel
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("THCA_PTC")
 if (file_exists == FALSE) {
   dir.create("THCA_PTC")
@@ -768,10 +704,7 @@ download.file(curl, "Integrated Genomic Characterizationof Papillary Thyroid Car
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("THYM_TETs")
 if (file_exists == FALSE) {
   dir.create("THYM_TETs")
@@ -790,10 +723,7 @@ download.file(curl, "The Integrated Genomic Landscape of ThymicEpithelial Tumors
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("UCEC")
 if (file_exists == FALSE) {
   dir.create("UCEC")
@@ -810,10 +740,7 @@ download.file(curl, "Integrated genomic characterization of endometrial carcinom
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("UCS")
 if (file_exists == FALSE) {
   dir.create("UCS")
@@ -844,10 +771,7 @@ download.file(curl, "Integrated Molecular Characterization of UterineCarcinosarc
 rm(list = ls(all.names = TRUE))
 ls(all.names = TRUE)
 
-# Change setting of timeout
-options(timeout = 86400)
-
-setwd("/Volumes/G_DRIVEmobile/Senn_CDK_Cyclins_Cancer/reference_data")
+setwd("/Volumes/G_DRIVEmobile/Revised_recount3_Rdata/reference_data")
 file_exists <- file.exists("UVM")
 if (file_exists == FALSE) {
   dir.create("UVM")
